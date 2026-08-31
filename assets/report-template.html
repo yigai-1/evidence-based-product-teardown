@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{REPORT_TITLE}}</title>
+<style>
+:root{color-scheme:light dark;--bg:#f3f1eb;--paper:#fffdf8;--ink:#20211f;--muted:#676a64;--line:#d8d4ca;--dark:#191a19;--main:#c70b77;--main-soft:#f9e2f0;--infer:#a35e00;--infer-soft:#fff0d4;--suggest:#0e659f;--suggest-soft:#e0f1fd;--unknown:#657078;--unknown-soft:#e9edef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.62 Inter,"PingFang SC","Microsoft YaHei",sans-serif}header{padding:46px max(20px,calc((100vw - 1240px)/2));background:var(--dark);color:#fff;border-bottom:5px solid var(--main)}header h1{margin:0 0 12px;font-size:clamp(32px,5vw,58px);line-height:1}header p{max-width:900px;color:#d5d8d4}nav{position:sticky;top:0;z-index:10;display:flex;gap:4px;overflow:auto;padding:8px max(12px,calc((100vw - 1240px)/2));background:var(--paper);border-bottom:1px solid var(--line)}nav a{white-space:nowrap;color:var(--ink);text-decoration:none;padding:5px 8px}main{max-width:1240px;margin:auto;padding:28px 18px 70px}section{scroll-margin-top:62px;margin-bottom:42px}h2{font-size:24px;margin:0 0 15px;padding-bottom:7px;border-bottom:2px solid var(--ink)}.tag{display:inline-block;padding:2px 7px;border-radius:999px;font-size:11px;font-weight:800}.confirmed{background:var(--main-soft);color:#81004b}.inferred{background:var(--infer-soft);color:#744200}.suggested{background:var(--suggest-soft);color:#064a76}.unknown{background:var(--unknown-soft);color:#3f4950}.table-wrap{overflow:auto;border:1px solid var(--line);background:var(--paper)}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:9px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--dark);color:#fff}.panel{background:var(--paper);border-left:4px solid var(--main);padding:13px;margin:9px 0}.diagram{background:var(--paper);border:1px solid var(--line);padding:14px;overflow:auto}footer{margin-top:44px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:640px){header{padding:35px 18px}main{padding-left:13px;padding-right:13px}}
+@media(prefers-color-scheme:dark){:root{--bg:#101110;--paper:#1c1e1c;--ink:#f2f2ed;--muted:#b0b4ae;--line:#3a3e39;--main:#ff43ad;--main-soft:#40112e;--infer:#f2a43b;--infer-soft:#3d2a10;--suggest:#58adf0;--suggest-soft:#123249;--unknown:#a8b0b8;--unknown-soft:#2d3235}.confirmed{color:#ffb9df}.inferred{color:#ffd08b}.suggested{color:#bde3ff}.unknown{color:#d8dde1}}
+</style>
+</head>
+<body>
+<header><h1>{{REPORT_TITLE}}</h1><p>{{ONE_SENTENCE_SUMMARY}}</p></header>
+<nav><a href="#evidence">证据</a><a href="#user">用户层</a><a href="#technical">技术层</a><a href="#model">模型层</a><a href="#data">数据层</a><a href="#architecture">全景架构</a><a href="#risks">风险</a></nav>
+<main>
+<section id="evidence"><h2>证据范围与产品类型</h2><div class="panel">{{EVIDENCE_AND_ARCHETYPE}}</div></section>
+<section id="user"><h2>用户层</h2>{{USER_LAYER}}</section>
+<section id="technical"><h2>技术层</h2>{{TECHNICAL_LAYER}}</section>
+<section id="model"><h2>模型层</h2>{{MODEL_LAYER}}</section>
+<section id="data"><h2>数据层</h2>{{DATA_LAYER}}</section>
+<section id="architecture"><h2>跨层端到端流与全景架构</h2><div class="diagram">{{ARCHITECTURE_DIAGRAM}}</div></section>
+<section id="risks"><h2>As-Is、To-Be、风险与未知</h2>{{RISKS_AND_UNKNOWN}}</section>
+<footer>{{SOURCE_NOTE}}</footer>
+</main>
+</body>
+</html>
