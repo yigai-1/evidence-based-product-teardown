@@ -1,5 +1,5 @@
 ---
-name: evidence-based-product-teardown
+name: product-teardown
 description: Evidence-led teardown and architecture analysis of software products from screenshots, live sites, recordings, documents, or source code. Use when the user asks to reverse-engineer a product's journey, features, agents, models, data, workflow, tools, or architecture. Do not use for evidence-free product ideation or ordinary reviews.
 ---
 
@@ -118,4 +118,3 @@ Before delivery, verify:
 - missing examples remain `【未知】`, not assumed;
 - the HTML is a single, valid, responsive file with readable tables and diagrams;
 - no product-specific methodology, System Prompt, credentials, or hidden reasoning is embedded in the skill.
-
