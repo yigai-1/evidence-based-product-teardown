@@ -1,0 +1,4 @@
+interface:
+  display_name: "证据驱动产品拆解"
+  short_description: "基于截图、网站或代码完成四层产品架构拆解"
+  default_prompt: "Use $evidence-based-product-teardown to inspect the supplied product evidence and deliver a four-layer HTML teardown."
